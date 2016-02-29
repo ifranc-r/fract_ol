@@ -6,7 +6,7 @@
 #    By: ifranc-r <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/02/25 17:48:33 by ifranc-r          #+#    #+#              #
-#    Updated: 2016/02/25 17:48:34 by ifranc-r         ###   ########.fr        #
+#    Updated: 2016/02/29 17:38:36 by ifranc-r         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = fract_ol
 
 HEAD = includes/minilibx_macos/
 
-LIB = -L ./libft/ -lft -I ./includes/minilibx_macos/ -lmlx -framework OpenGL\
+LIB = -L ./libft/ -lft -L ./includes/minilibx_macos/ -lmlx -framework OpenGL\
 	  -framework AppKit
 
 SRC = ./srcs/main.c \

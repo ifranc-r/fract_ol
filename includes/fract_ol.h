@@ -6,7 +6,7 @@
 /*   By: ifranc-r <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/25 17:37:14 by ifranc-r          #+#    #+#             */
-/*   Updated: 2016/02/25 17:37:18 by ifranc-r         ###   ########.fr       */
+/*   Updated: 2016/02/29 17:39:23 by ifranc-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,10 @@ typedef struct	s_img
 
 typedef struct	s_all
 {
-	struct	t_color color;
-	struct 	t_img	img;
+	struct	s_color color;
+	struct 	s_img	img;
 	void	*mlx;
-	void	*win
+	void	*win;
 }				t_all;
 
-#endif 
+#endif
