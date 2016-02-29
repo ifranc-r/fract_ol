@@ -29,6 +29,7 @@ typedef struct	s_color
 	int		red;
 	int		blue;
 	int 	green;
+	int		alpha;
 }				t_color;
 
 typedef struct	s_img
