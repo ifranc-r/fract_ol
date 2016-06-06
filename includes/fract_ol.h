@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #ifndef FRACT_OL_H
 # define FRACT_OL_H
 # include <mlx.h>
@@ -21,32 +20,103 @@
 # include <errno.h>
 # include "../libft/libft.h"
 # include <math.h>
-# define WIN_X 1920
-# define WIN_Y 1080
+# define WIN_X 600
+# define WIN_Y 600
+# define I_X 600
+# define I_Y 600
+# define PI 3.14159265359
 
-typedef struct	s_color
+typedef struct		s_color
 {
-	int		red;
-	int		blue;
-	int 	green;
-	int		alpha;
-}				t_color;
+	int				red;
+	int				blue;
+	int				green;
+	int				alpha;
+}					t_color;
 
-typedef struct	s_img
+typedef struct		s_coord
 {
-	void	*img;
-	char	*data;
-	int		bitpx;
-	int		size;
-	int		endian;
-}				t_img;
+	int				x;
+	int				y;
+	int				r;
+	int				g;
+	int				b;
+	double			x_r;
+	double			y_r;
+	double			x1;
+	double			x2;
+	double			y1;
+	double			y2;
+	double			c_r;
+	double			c_i;
+	double			z_r;
+	double			z_i;
+	double			tmp;
+	double			mousex;
+	double			mousey;
+	double			mousex1;
+	double			mousey1;
+	double			mousezy;
+	double			mousezx;
+	int				i;
+	int				stop;
+	int				iteration;
+	double			zoom;
+}					t_coord;
 
-typedef struct	s_all
+typedef struct		s_img
 {
-	struct	s_color color;
-	struct 	s_img	img;
-	void	*mlx;
-	void	*win;
-}				t_all;
+	void			*img;
+	char			*data;
+	int				bitpx;
+	int				size;
+	int				endian;
+}					t_img;
+
+typedef struct		s_all
+{
+	struct s_coord	coord;
+	struct s_color	color;
+	struct s_img	img;
+	void			*mlx;
+	void			*win;
+	int				fract;
+	int				m;
+}					t_all;
+
+void				menu_itoa(t_all *all);
+void				mlx_funct(int keycode, t_all *all);
+int					mlx_close(int keycode, t_all *all);
+void				menu_charac(t_all *all);
+void				get_fract(t_all *all);
+void				main_tricorn(t_all *all);
+void				tricorn(t_coord *coord, t_all *all);
+void				main_goldenratio(t_all *all);
+void				goldenratio(t_coord *coord, t_all *all);
+void				hotblood(t_coord *coord, t_all *all);
+void				main_hotblood(t_all *all);
+void				shiva(t_coord *coord, t_all *all);
+void				main_shiva(t_all *all);
+void				yolo(t_coord *coord, t_all *all);
+void				main_yolo(t_all *all);
+void				main_burningship(t_all *all);
+void				main_mandelbrot(t_all *all);
+int					mlx_hook_mov(int x, int y, t_all *all);
+void				main_julia(t_all *all);
+int					mlx_funct_mouse(int keymouse, int x, int y, t_all *all);
+void				mlx_pixel_put_image(int x, int y, t_all *all);
+void				init_mlx(t_all *all);
+void				set_color(int red, int green, int blue, t_color *color);
+int					mlx_funct_key(int keycode, t_all *all);
+void				mandelbrot(t_coord *coord, t_all *all);
+void				init_mandelbrot2(t_coord *coord);
+void				init_mandelbrot(t_coord *coord);
+void				init_julia(t_coord *coord);
+void				init_julia2(t_coord *coord);
+void				julia(t_coord *coord, t_all *all);
+void				burningship(t_coord *coord, t_all *all);
+void				init_burningship2(t_coord *coord);
+void				init_burningship(t_coord *coord);
+void				menu(t_all *all);
 
 #endif

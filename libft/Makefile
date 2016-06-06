@@ -74,7 +74,9 @@ SRC = ft_atoi.c\
 	 ft_freestrjoin.c\
 	 ft_abs.c\
 	 ft_strrealloc.c\
-	 ft_power.c
+	 ft_power.c\
+	 ft_ditoa.c\
+	 ft_exp.c
 
 OUTPUT = $(SRC:.c=.o)
 

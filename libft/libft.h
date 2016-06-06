@@ -17,6 +17,7 @@
 # include <string.h>
 # include <unistd.h>
 # include <ctype.h>
+# include <math.h>
 # define BUFF_SIZE 1024
 
 typedef	struct		s_list
@@ -94,5 +95,6 @@ int					ft_isdigit(int c);
 int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
-
+char				*ft_ditoa(double n, int c);
+int					ft_exp(int n, int p);
 #endif
